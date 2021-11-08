@@ -1,0 +1,27 @@
+QUESTION, A, B, C, D
+Automatic graph segmentation is one of the key technologies of MindSpore., #True, False,,
+Malformed data is not dirty data., True, #False,,
+In a medical image recognition task we usually are more concerned about the recall ratio then the precision ration when evaluating model performance., #True, False,,
+Cifar10 is a built-in data set of Keras., #True, False,,
+If a model has a small bias and a large variance on the test set what is the problem with the model?, Underfitting, #Overfitting, Just fitting, Overfitting and underfitting
+Which of the following statements about AdaGrad is incorrect?, AdaGrad can dynamically adjust the learning rate. The more parameters are updated the lower the learning rate, AdaGrad can adjust the learning rate for different parameters., When AdaGrad optimizes the model the learning rate is dynamically adjusted by dividing the learning rate by the root mean square of all gradients of a parameter., #AdaGrad calculates the quadratic differential of a parameter to dynamically adjust the learning rate.
+Which of the following statements about dropout is incorrect?, A dropout rate is a hyperparameter., During training the network layer to which dropout is added will randomly discard neurons of dropout rate, If dropout is added to a network layer during training but not during inference the weight value of this layer multiplies (1-dropout rate)., #Dropout can't be added during inference
+In the process of training the neural network which of the following methods is used to update the parameters so as to minimize the loss function?, Grid search, Random search, #Gradient descent, Least squares method
+Which of the following is not the model deployment and application feature of the ModelArts platform?, Batch inference, #Low throughput and low latency, Efficient distributed computing, Combination with HiLens for easy deployment on devices
+When tf.keras is used to build a network model which of the following statements about tf.keras.Model and tf.keras.Sequential is incorrect?, tf.keras.Model supports the multi-input network model. tf.keras.Sequential does not support the multi-input network model., tf.keras.Model supports the multi-output network model. tf.keras.Sequential does not support the multi-output network model., If a sharing layer exists on the network tf.keras.Model is recommended for building a model, #If a sharing layer exists on the network tf.keras.Sequential is recommended for building a model
+Which of the following is a generative model?, Logistic regression, Decision tree, #Naive Bayes, Support vector machine
+Which of the following methods cannot  resolve overfitting in a decision tree?, Perform pre-pruning, Perform post-pruning, Use the integration algorithm to set up a random forest, #Use the integration algorithm to set up an AdaBoost model.
+Which of the following options is a commonly used loss function for classification problems?, Mean Square Error Loss Function, #Cross Entropy Loss Function, L1 Loss Function, L2 Loss Function
+Which of the following operations can be performed on the ExeML module of ModelArts?, #Upload and label data, Build a model, #Train a model, #Deploy a service and bring it online
+Which of the following options are hyperparameters?, #K in KNN, #K in K-Means, #C in SVM, Information Entropy in Decision Tree
+Suppose the following scenario: Now we need to classify the data and the data features are all continuous values. Which of the following models are suitable for this scenario?, Linear regression, #Logic regression, #Support vector machine, Decision tree
+In a recurrent neural network gradient disappearance often occurs. Which of the following may cause gradient disappearance?, #The time sequence is too long, #Sigmoid is selected as the activation function of the hidden layer, The initial weight value is large, #There is an excessive number of network layers
+What types of services can be deployed on ModelArts?, #Online services, #Batch services, #Edge services, Cloud services
+Which of the following options belong to the application scenarios of computer vision?, #Smart parking, #Industrial product defect detection, Machine translation, Smart customer service
+Which of the following are application scenarios of EI Intelligent Twins?, #TrafficGo, #Industrial Intelligent Twins, #CampusGo, #Network AI Engine
+Which of the following options belong to the Huawei Cloud EI service?, #ModelArts, #EI Intelligent Twins, #EI Experience Hall, #EI Service Family
+Which of the following environments are available for creating notebooks on ModelArts?, #Python3, #Python2, MindSpore, #TF-2.1.0&Pytorch-1.4.0-python3.6
+Compared with the Sigmoid activation function which of the following options are the advantages of ReLU?, #Mitigating the problem of vanishing gradient, Solved the problem of gradient explosion, Derivable everywhere, #Save calculation
+Which of the following are the common loss functions used in machine learning?, #Mean absolute error, #Mean squared error, #Cross entropy, #Hinge loss
+Which of the following are common Python computer vision libraries?, numpy, pandas, #matplotlib, #cv2
+Which of the following options are Huawei products?, #Atlas 200DK, #Ascend 310, #Ascend910, Atlas 400DK
