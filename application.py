@@ -13,12 +13,12 @@ class Trainer:
             question.process_question()
             sleep(0.5)
 
-    def import_questions(self, filename = "Questions.csv", csv_file_separator = ';'):
+    def import_questions(self, filename = "Questions.csv", csv_file_separator = ','):
         with open(filename, 'r') as file:
             for line_number, line in enumerate(file):
                 if line_number == 0:
                     continue
-                line = line.split(',')
+                line = line.split(csv_file_separator)
                 parsed = []
                 for index, record in enumerate(line):
                     if len(record) != 0 and record != "\n":
