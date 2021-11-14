@@ -25,3 +25,16 @@ Compared with the Sigmoid activation function which of the following options are
 Which of the following are the common loss functions used in machine learning?, #Mean absolute error, #Mean squared error, #Cross entropy, #Hinge loss
 Which of the following are common Python computer vision libraries?, numpy, pandas, #matplotlib, #cv2
 Which of the following options are Huawei products?, #Atlas 200DK, #Ascend 310, #Ascend910, Atlas 400DK
+TensorFlow2.0 uses Keras and eager execution to easily mode., #True, False,,
+MindSpore supports GPU acceleration, #True, False,,
+Similar to a hidden layer the quantity of neurons at both an input layer and an output layer of a neural network is a hyperparameter that can be adjusted, True, #False,,
+After the image label service is called only one corresponding label value is returned, True, #False,,
+Da Vinci architecture is the core of the Ascend AI computing engine and AI processsor., #True, False,,
+Polynomial regression cannot resolve the nonlinear problem.,True, #False,,
+If the metrics parameter is not specified in Model.compile no loss value will be outputted., True, #False,,
+In CNN the convolutional layer can reduce the dimension of feature maps., #True, False,,
+AI is the core research area of machine learning., True, #False,,
+Graph Engine Service depends on structured data and facilitates querying and analysis of graph-structure data based on various relationships., True, #False,,
+Which of the following is not a feature of the Atlas 500 AI edge stations?, Strong computing, Easy deployment, #High energy consumption, Cloud collaboration
+What determines the number of neurons in the input layer of the neural network?, #Data dimension, Number of data items, Classification number, Number of parameters
+Which of the following is a generative model?, Logistic regression, Decision tree, #Naive Bayes, Support vector machine

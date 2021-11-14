@@ -1,4 +1,5 @@
 from question import Question, QuestionFactory
+from random import shuffle
 from time import sleep
 from os import system
 
@@ -9,6 +10,7 @@ class Trainer:
         self.import_questions()
 
     def run(self):
+        shuffle(self.questions_pool)
         for question in self.questions_pool:
             question.process_question()
             sleep(0.5)
