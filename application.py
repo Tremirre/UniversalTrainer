@@ -1,7 +1,6 @@
 from question import Question, QuestionFactory
 from random import shuffle
 from time import sleep
-from os import system
 
 
 class Trainer:
@@ -14,6 +13,12 @@ class Trainer:
         for question in self.questions_pool:
             question.process_question()
             sleep(1)
+
+    def show_questions_and_answers(self):
+        for question in self.questions_pool:
+            question.print_question()
+            question.print_answers()
+            question.print_correct_answers()
 
     def import_questions(self, filename = "Questions.csv", csv_file_separator = ','):
         with open(filename, 'r') as file:
