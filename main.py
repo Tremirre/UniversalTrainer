@@ -1,4 +1,4 @@
-from application import Trainer
+from Trainer.application import Trainer
 
 if __name__ == "__main__":
     app = Trainer()

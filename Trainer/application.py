@@ -1,14 +1,35 @@
-from question import Question, QuestionFactory
-from random import shuffle
+from random import shuffle, sample
 from time import sleep
+from Trainer.question import Question, QuestionFactory
+from Trainer.input_parser import Mode, parse_input
 
 
 class Trainer:
     def __init__(self):
         self.questions_pool: list[Question] = []
+        self.mode: Mode = parse_input()
         self.import_questions()
 
     def run(self):
+        mode_dict = {
+            Mode.TEST: self.test,
+            Mode.TRAIN: self.train,
+            Mode.LIST: self.show_questions_and_answers,
+            Mode.QUIT: lambda : None
+        }
+        mode_dict[self.mode]()
+
+    def test(self):
+        test_size = 20
+        selected = sample(self.questions_pool, test_size)
+        score = 0
+        for question in selected:
+            score += question.process_question(test=True)
+            sleep(1)
+        print("\n========================================================\n")
+        print(f"Test completed! Obtained score: {score}/{test_size} correct answers")
+
+    def train(self):
         shuffle(self.questions_pool)
         for question in self.questions_pool:
             question.process_question()
