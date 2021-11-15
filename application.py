@@ -13,7 +13,7 @@ class Trainer:
         shuffle(self.questions_pool)
         for question in self.questions_pool:
             question.process_question()
-            sleep(0.5)
+            sleep(1)
 
     def import_questions(self, filename = "Questions.csv", csv_file_separator = ','):
         with open(filename, 'r') as file:

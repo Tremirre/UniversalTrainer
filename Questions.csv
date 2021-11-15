@@ -38,3 +38,16 @@ Graph Engine Service depends on structured data and facilitates querying and ana
 Which of the following is not a feature of the Atlas 500 AI edge stations?, Strong computing, Easy deployment, #High energy consumption, Cloud collaboration
 What determines the number of neurons in the input layer of the neural network?, #Data dimension, Number of data items, Classification number, Number of parameters
 Which of the following is a generative model?, Logistic regression, Decision tree, #Naive Bayes, Support vector machine
+In machine learning how many support vectors can the SVM algorithm have?, 1, 2, 3, #Several
+Which of the following networks is not a recurrent neural network?, BiRNN, #Highway Network, LSTM, GRU
+Which of the following statements about ModelArts is incorrect?, #Supports massive data preprocessing and automatic labeling, Supports large-scale distributed training, Quickly converts and migrates existing models,
+Which of the following statements about hyperparameters is incorrect?, Hyperparameters cannot be changed by training models. Sometimes they need to be manually optimized., The K value in KNN is a hyperparameter, The K value in K-means is a hyperparameter, #In K-means the initial value of the clustering center is not a hyperparameter and thus the training result is not affected
+When was the Turing Test proposed?, #1950, 1956, 1959, 1962
+Which of the following models is not suitable for the scenario where the covariance between data features is large?, Logistic regression, #SVM, Naive Bayes, Neural network
+A company wants to use the HiAI platform to develop its own APP. Which of the following IDEs can be used in conjunction with the HiAI platform?, Matlab, #Android Studio, Spyder, Jupyter Notebook
+Compared with the batch gradient descent method which of the following options are the advantages of the Mini batch gradient descent method?, #Fast calculation speed in one time parameters update, #Skip local minimum, Stable, No vanishing gradient problem
+When using HUAWEI CLOUD services which of the following information will be used for authentication?, Current time, #AK, Service name, #SK
+In medical image recognition project with deep learning used the number of data sets is small. Which of the following methods can be used to resolve this problem?, #Transfer learning, #Meta learning, #Data augmentation, Data upsampling
+Regarding the standard RNN model statement which of the following options are correct?, #There is a one-to-many model, There is no many-to-many model structure, #There is a one-to-one model structure, The time direction is not considered when backpropagating
+Which of the following are AI applications?, #Smart speaker, #Smart customer service, #Autonomous driving, #AlphaGo
+Which of the following options are the main advantages of the Keras interface in TensorFlow 2.0?, #Convenient for users, #Modular and combinable, #Easy to expand, Use a static graph mechanism
