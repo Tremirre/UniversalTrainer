@@ -1,7 +1,7 @@
 # HuaweiTrainer
 ## Basics
-Simple application for training to the HCIA exam
-
+Simple application for training to the HCIA exam.
+Currently compatible with python 3.8.x and higher. 
 It provides a comfy interface to get well acquainted with course exam questions.
 
 To run the program it is you should start the console in the project directory and run main.py file with python by using command:
@@ -24,3 +24,6 @@ Currently the app supports three modes:
   At the end of the test the user is provided with obtained score.
   Call this mode with <i>-test</i> flag
   > py main.py -test
+
+## Exit
+Currently the only way of quiting the app amid running is to press Crtl+C on your keyboard.
