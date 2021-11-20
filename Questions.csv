@@ -55,3 +55,27 @@ Learning AI requires data foundation., #True, False,,
 Which of the following is not a Huawei HiAI module?, #HiAI Framework, HiAI Foundation, HiAI Service, HiAI Engine
 The Huawei HiAI platform supports remote debugging of real devices., #True, False,,
 Which of the following activation functions can be used for image classification at the output layer?, #Sigmoid, #Tanh, ReLU, #Piecewise functions
+The loss function of logistic regression is the cross-entropy loss function., #True, False,,
+Faced with the challenge of achieving efficient distributed training for ultra-large-scale models MindSpore is handled as:, #Automatic parallel, Serial, Manual parallel,
+The speed of grid search must be faster than random search, True, #False,,
+Backpropagation makes gradient descent more efficient by means of dynamic programming, #True, False,,
+The generalization error will continue to decrease as the complexity of the model increases., True, #False,,
+In the KNN model a small K value may cause model underfitting, True, #False,,
+Which of the following network layers does not need to be included in a convolutional neural network?, Input layer, Convolutional layer, #Pooling layer, Output layer
+Which of the following schools does the expert system belong to?, #Symbolism, Connectionism, Behaviorism, None of the above
+Which of the following options is not the feature of ModelArts?, Supports Tensorflow and Pytorch, Supports model management, #Supports automatic tuning, Built-in multiple models
+Which of the following options is Huawei's artificial intelligence computing platform?, ModelArts, Huawei Cloud EI, ECS, #Atlas
+Which of the following options is the classification of the AI chip business from the application?, Inference and Acceleration, Acceleration and Training, #Training and Inference, Compiling and Training
+Which of the following statements about LSTM are correct?, #The LSTM unit has three types of gates: input gate; forget gate; output gate, #The input of one time sequence of LSTM is concatenated with the output of its last time sequence, #If peephole is used in LSTM the vector of the output and memory unit of the precious time sequence are concatenated with the input vector, #In LSTM if the dimension of the input vector is 200 and the dimension of the hidden layer is 100 and the peephole is not considered the parameter quantity at this layer is calculated as follows: 4*((100+200)*100 + 100)
+Which of the following are the problems you may encounter when training a GAN?, #An overhigh learning rate leads to model divergence, #The discriminator is too well trained at the beginning of the training. As a result the generator cannot be trained, #The mode collapse results in insufficiently diversified images., #The number of data sets is small causing model overfitting
+Which of the following are the major modules of the Ascend AI processor?, #Chip system control CPU, #AI computing engine, #Multi-level System-On-a-Chip cache or buffer, #Digital vision pre-processing module
+Which of the following statements about classes are correct?, #In Python you can quickly create classes through inheritance, Inherit all attributes and methods of the parent class in Python, In Python objects are subclasses by default,
+Both '==' and 'is' can be used to determine whether the values are equal., #True, False,,
+Which of the following algorithms can be used both in classification and in regression problems?, #SVM, #Neural Network, #GBDT, Naive Bayes, Linear regression
+L1 can generate more sparse model than L2., #True, False,,
+Choose correct order of steps during the procedure of model: 1. Model deployment 2.Model test 3. Model fine-tuning 4. Data splitting 5. Model verification 6. Model training, #4->6->5->2->1->3, 5->3->2->1->4->6, 4->6->5->2->3->1, 6->4->5->2->1->3
+Kernel functions are used to construct non-linear SVMs, #True, False,,
+Which of the following are common optimizers?, #Nesterov, #AdaGrad, #Adam, #Momentum optimizer
+Which of the following formulas define recall?, True positive/(True positive + False positive), True positive/False positive, True negative/False positive, #True negative/(False negative + True negative)
+Training error and generalization error are the same things, True, #False,,
+K value in K-fold cross validation is a hyperparameter, #True, False,,
