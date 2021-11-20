@@ -51,3 +51,7 @@ In medical image recognition project with deep learning used the number of data 
 Regarding the standard RNN model statement which of the following options are correct?, #There is a one-to-many model, There is no many-to-many model structure, #There is a one-to-one model structure, The time direction is not considered when backpropagating
 Which of the following are AI applications?, #Smart speaker, #Smart customer service, #Autonomous driving, #AlphaGo
 Which of the following options are the main advantages of the Keras interface in TensorFlow 2.0?, #Convenient for users, #Modular and combinable, #Easy to expand, Use a static graph mechanism
+Learning AI requires data foundation., #True, False,,
+Which of the following is not a Huawei HiAI module?, #HiAI Framework, HiAI Foundation, HiAI Service, HiAI Engine
+The Huawei HiAI platform supports remote debugging of real devices., #True, False,,
+Which of the following activation functions can be used for image classification at the output layer?, #Sigmoid, #Tanh, ReLU, #Piecewise functions
