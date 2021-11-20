@@ -6,7 +6,7 @@ from Trainer.input_parser import Mode, parse_input
 
 class Trainer:
     def __init__(self):
-        self.questions_pool: list[Question] = []
+        self.questions_pool = []
         self.mode: Mode = parse_input()
         self.import_questions()
 
@@ -15,7 +15,7 @@ class Trainer:
             Mode.TEST: self.test,
             Mode.TRAIN: self.train,
             Mode.LIST: self.show_questions_and_answers,
-            Mode.QUIT: lambda : None
+            Mode.QUIT: lambda: None
         }
         mode_dict[self.mode]()
 
@@ -41,7 +41,7 @@ class Trainer:
             question.print_answers()
             question.print_correct_answers()
 
-    def import_questions(self, filename = "Questions.csv", csv_file_separator = ','):
+    def import_questions(self, filename="Questions.csv", csv_file_separator=','):
         with open(filename, 'r') as file:
             for line_number, line in enumerate(file):
                 if line_number == 0:

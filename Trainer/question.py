@@ -5,7 +5,7 @@ from string import ascii_uppercase
 
 class Question(ABC):
     @abstractmethod
-    def __init__(self, question_content: str, answers: list[str]) -> None:
+    def __init__(self, question_content: str, answers) -> None:
         self._question_content: str = question_content
         self._answers = answers
 
@@ -47,7 +47,7 @@ class Question(ABC):
 
 
 class SingleChoice(Question):
-    def __init__(self, question_content: str, answers: list[str], correct_index: int) -> None:
+    def __init__(self, question_content: str, answers, correct_index: int) -> None:
         super().__init__(question_content, answers)
         self._correct = answers[correct_index]
 
@@ -66,11 +66,11 @@ class SingleChoice(Question):
 
 
 class MultipleChoice(Question):
-    def __init__(self, question_content: str, answers: list[str], correct_indices: list[int]) -> None:
+    def __init__(self, question_content: str, answers, correct_indices) -> None:
         super().__init__(question_content, answers)
         self._correct = set([answers[i] for i in correct_indices])
 
-    def check_answer(self, letters: list[str]) -> bool:
+    def check_answer(self, letters) -> bool:
         if len(letters) != len(self._correct):
             return False
         for letter in letters:
@@ -80,7 +80,7 @@ class MultipleChoice(Question):
                 return False
         return True
 
-    def ask_for_answers(self) -> list[str]:
+    def ask_for_answers(self):
         answer = input("Provide letter (or letters separated by spaces) as your answer/s\n")
         return answer.split()
 
@@ -116,7 +116,7 @@ class BooleanQuestion(Question):
 
 class QuestionFactory:
     @staticmethod
-    def create_question(question_content: str, answers: list[str]) -> Question:
+    def create_question(question_content: str, answers) -> Question:
         if (options := len(answers)) < 2:
             raise Exception(f"Invalid number of numbers ({options}) for question {question_content}")
         correct_indices = []
