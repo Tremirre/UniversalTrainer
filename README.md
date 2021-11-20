@@ -24,6 +24,12 @@ Currently the app supports three modes:
   At the end of the test the user is provided with obtained score.
   Call this mode with <i>-test</i> flag
   > py main.py -test
+  
+4. TEST with custom size: <br><br>
+  User can specify the length of the test by providing the desired (positive) number of questions after the flag. <br>
+  In case user inputs the size larger then the pool of questions, the size will be automatically adjusted to fit. <br>
+  Example command for test with 10 questions:
+  >py main.py -test 10
 
 ## Exit
 Currently the only way of quiting the app amid running is to press Ctrl+C on your keyboard.
