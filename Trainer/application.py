@@ -7,7 +7,7 @@ from Trainer.input_parser import Mode, parse_input
 class Trainer:
     def __init__(self):
         self.questions_pool = []
-        self.mode: Mode = parse_input()
+        self.mode, self.test_size = parse_input()
         self.import_questions()
 
     def run(self):
@@ -20,14 +20,14 @@ class Trainer:
         mode_dict[self.mode]()
 
     def test(self):
-        test_size = 20
-        selected = sample(self.questions_pool, test_size)
+        adjusted_test_size = min(self.test_size, len(self.questions_pool))
+        selected = sample(self.questions_pool, adjusted_test_size)
         score = 0
         for question in selected:
             score += question.process_question(test=True)
             sleep(1)
         print("\n========================================================\n")
-        print(f"Test completed! Obtained score: {score}/{test_size} correct answers")
+        print(f"Test completed! Obtained score: {score}/{adjusted_test_size} correct answers")
 
     def train(self):
         shuffle(self.questions_pool)
@@ -40,6 +40,7 @@ class Trainer:
             question.print_question()
             question.print_answers()
             question.print_correct_answers()
+            print()
 
     def import_questions(self, filename="Questions.csv", csv_file_separator=','):
         with open(filename, 'r') as file:
