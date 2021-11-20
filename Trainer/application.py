@@ -1,6 +1,6 @@
 from random import shuffle, sample
 from time import sleep
-from Trainer.question import Question, QuestionFactory
+from Trainer.question import QuestionFactory
 from Trainer.input_parser import Mode, parse_input
 
 
