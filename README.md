@@ -26,4 +26,4 @@ Currently the app supports three modes:
   > py main.py -test
 
 ## Exit
-Currently the only way of quiting the app amid running is to press Crtl+C on your keyboard.
+Currently the only way of quiting the app amid running is to press Ctrl+C on your keyboard.
