@@ -24,7 +24,7 @@ Which of the following environments are available for creating notebooks on Mode
 Compared with the Sigmoid activation function which of the following options are the advantages of ReLU?, #Mitigating the problem of vanishing gradient, Solved the problem of gradient explosion, Derivable everywhere, #Save calculation
 Which of the following are the common loss functions used in machine learning?, #Mean absolute error, #Mean squared error, #Cross entropy, #Hinge loss
 Which of the following are common Python computer vision libraries?, numpy, pandas, #matplotlib, #cv2
-Which of the following options are Huawei products?, #Atlas 200DK, #Ascend 310, #Ascend910, Atlas 400DK
+Which of the following options are Huawei products?, #Atlas 200DK, #Ascend 310, #Ascend 910, Atlas 400DK
 TensorFlow2.0 uses Keras and eager execution to easily mode., #True, False,,
 MindSpore supports GPU acceleration, #True, False,,
 Similar to a hidden layer the quantity of neurons at both an input layer and an output layer of a neural network is a hyperparameter that can be adjusted, True, #False,,
