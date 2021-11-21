@@ -10,7 +10,7 @@ In the process of training the neural network which of the following methods is 
 Which of the following is not the model deployment and application feature of the ModelArts platform?, Batch inference, #Low throughput and low latency, Efficient distributed computing, Combination with HiLens for easy deployment on devices
 When tf.keras is used to build a network model which of the following statements about tf.keras.Model and tf.keras.Sequential is incorrect?, tf.keras.Model supports the multi-input network model. tf.keras.Sequential does not support the multi-input network model., tf.keras.Model supports the multi-output network model. tf.keras.Sequential does not support the multi-output network model., If a sharing layer exists on the network tf.keras.Model is recommended for building a model, #If a sharing layer exists on the network tf.keras.Sequential is recommended for building a model
 Which of the following is a generative model?, Logistic regression, Decision tree, #Naive Bayes, Support vector machine
-Which of the following methods cannot  resolve overfitting in a decision tree?, Perform pre-pruning, Perform post-pruning, Use the integration algorithm to set up a random forest, #Use the integration algorithm to set up an AdaBoost model.
+Which of the following methods cannot resolve overfitting in a decision tree?, Perform pre-pruning, Perform post-pruning, Use the integration algorithm to set up a random forest, #Use the integration algorithm to set up an AdaBoost model.
 Which of the following options is a commonly used loss function for classification problems?, Mean Square Error Loss Function, #Cross Entropy Loss Function, L1 Loss Function, L2 Loss Function
 Which of the following operations can be performed on the ExeML module of ModelArts?, #Upload and label data, Build a model, #Train a model, #Deploy a service and bring it online
 Which of the following options are hyperparameters?, #K in KNN, #K in K-Means, #C in SVM, Information Entropy in Decision Tree
@@ -37,7 +37,6 @@ AI is the core research area of machine learning., True, #False,,
 Graph Engine Service depends on structured data and facilitates querying and analysis of graph-structure data based on various relationships., True, #False,,
 Which of the following is not a feature of the Atlas 500 AI edge stations?, Strong computing, Easy deployment, #High energy consumption, Cloud collaboration
 What determines the number of neurons in the input layer of the neural network?, #Data dimension, Number of data items, Classification number, Number of parameters
-Which of the following is a generative model?, Logistic regression, Decision tree, #Naive Bayes, Support vector machine
 In machine learning how many support vectors can the SVM algorithm have?, 1, 2, 3, #Several
 Which of the following networks is not a recurrent neural network?, BiRNN, #Highway Network, LSTM, GRU
 Which of the following statements about ModelArts is incorrect?, #Supports massive data preprocessing and automatic labeling, Supports large-scale distributed training, Quickly converts and migrates existing models,
