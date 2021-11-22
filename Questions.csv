@@ -42,7 +42,7 @@ Which of the following networks is not a recurrent neural network?, BiRNN, #High
 Which of the following statements about ModelArts is incorrect?, #Supports massive data preprocessing and automatic labeling, Supports large-scale distributed training, Quickly converts and migrates existing models,
 Which of the following statements about hyperparameters is incorrect?, Hyperparameters cannot be changed by training models. Sometimes they need to be manually optimized., The K value in KNN is a hyperparameter, The K value in K-means is a hyperparameter, #In K-means the initial value of the clustering center is not a hyperparameter and thus the training result is not affected
 When was the Turing Test proposed?, #1950, 1956, 1959, 1962
-Which of the following models is not suitable for the scenario where the covariance between data features is large?, Logistic regression, #SVM, Naive Bayes, Neural network
+Which of the following models is not suitable for the scenario where the covariance between data features is large?, Logistic regression, SVM, #Naive Bayes, Neural network
 A company wants to use the HiAI platform to develop its own APP. Which of the following IDEs can be used in conjunction with the HiAI platform?, Matlab, #Android Studio, Spyder, Jupyter Notebook
 Compared with the batch gradient descent method which of the following options are the advantages of the Mini batch gradient descent method?, #Fast calculation speed in one time parameters update, #Skip local minimum, Stable, No vanishing gradient problem
 When using HUAWEI CLOUD services which of the following information will be used for authentication?, Current time, #AK, Service name, #SK
