@@ -15,7 +15,7 @@ class Trainer:
             Mode.TEST: self.test,
             Mode.TRAIN: self.train,
             Mode.LIST: self.show_questions_and_answers,
-            Mode.QUIT: lambda: None
+            Mode.QUIT: lambda: None,
         }
         mode_dict[self.mode]()
 
@@ -27,7 +27,9 @@ class Trainer:
             score += question.process_question(test=True)
             sleep(1)
         print("\n========================================================\n")
-        print(f"Test completed! Obtained score: {score}/{adjusted_test_size} correct answers")
+        print(
+            f"Test completed! Obtained score: {score}/{adjusted_test_size} correct answers"
+        )
 
     def train(self):
         shuffle(self.questions_pool)
@@ -42,8 +44,8 @@ class Trainer:
             question.print_correct_answers()
             print()
 
-    def import_questions(self, filename="Questions.csv", csv_file_separator=','):
-        with open(filename, 'r') as file:
+    def import_questions(self, filename="Questions.csv", csv_file_separator=","):
+        with open(filename, "r") as file:
             for line_number, line in enumerate(file):
                 if line_number == 0:
                     continue
@@ -51,5 +53,7 @@ class Trainer:
                 parsed = []
                 for index, record in enumerate(line):
                     if len(record) != 0 and record != "\n":
-                        parsed.append(record.strip('\n').strip())
-                self.questions_pool.append(QuestionFactory.create_question(parsed[0], parsed[1:]))
+                        parsed.append(record.strip("\n").strip())
+                self.questions_pool.append(
+                    QuestionFactory.create_question(parsed[0], parsed[1:])
+                )

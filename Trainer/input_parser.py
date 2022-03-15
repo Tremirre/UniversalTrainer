@@ -23,7 +23,11 @@ def parse_input():
         elif int(args[1]) > 0:
             print("Chosen test size:", test_size := int(args[1]))
             return Mode.TEST, test_size
-        print(f"Unsupported argument as number of questions:", args[1], "\nThe application will terminate")
+        print(
+            f"Unsupported argument as number of questions:",
+            args[1],
+            "\nThe application will terminate",
+        )
         return Mode.QUIT, 0
     elif mode == "-list":
         print("Selected mode - List")

@@ -14,7 +14,7 @@ class Question(ABC):
         ...
 
     def print_question(self):
-        print(self._question_content, '\n')
+        print(self._question_content, "\n")
 
     def print_answers(self):
         shuffle(self._answers)
@@ -54,15 +54,19 @@ class SingleChoice(Question):
     def check_answer(self, letter: str) -> bool:
         if len(letter) != 1:
             return False
-        index = ord(letter.upper()) - ord('A')
+        index = ord(letter.upper()) - ord("A")
         return index < len(self._answers) and self._answers[index] == self._correct
 
     def ask_for_answers(self) -> str:
-        answer = input("Provide letter (or letters separated by spaces) as your answer/s\n")
+        answer = input(
+            "Provide letter (or letters separated by spaces) as your answer/s\n"
+        )
         return answer
 
     def print_correct_answers(self) -> None:
-        print(f"Correct answer:\n\t({ascii_uppercase[self._answers.index(self._correct)]}) {self._correct}")
+        print(
+            f"Correct answer:\n\t({ascii_uppercase[self._answers.index(self._correct)]}) {self._correct}"
+        )
 
 
 class MultipleChoice(Question):
@@ -74,18 +78,25 @@ class MultipleChoice(Question):
         if len(letters) != len(self._correct):
             return False
         for letter in letters:
-            if (answer_id := ascii_uppercase.index((letter.upper()))) >= len(self._answers):
+            if (answer_id := ascii_uppercase.index((letter.upper()))) >= len(
+                self._answers
+            ):
                 return False
             if self._answers[answer_id] not in self._correct:
                 return False
         return True
 
     def ask_for_answers(self):
-        answer = input("Provide letter (or letters separated by spaces) as your answer/s\n")
+        answer = input(
+            "Provide letter (or letters separated by spaces) as your answer/s\n"
+        )
         return answer.split()
 
     def print_correct_answers(self) -> None:
-        answers_with_ids = [(correct_answer, self._answers.index(correct_answer)) for correct_answer in self._correct]
+        answers_with_ids = [
+            (correct_answer, self._answers.index(correct_answer))
+            for correct_answer in self._correct
+        ]
         answers_with_ids.sort(key=lambda pair: pair[1])
         print("Correct answers:")
         for answer, answer_id in answers_with_ids:
@@ -98,9 +109,9 @@ class BooleanQuestion(Question):
         self._correct = correct
 
     def check_answer(self, letter: str) -> bool:
-        if letter not in {'t', 'T', 'f', 'F'}:
+        if letter not in {"t", "T", "f", "F"}:
             return False
-        answer = letter.lower() == 't'
+        answer = letter.lower() == "t"
         return answer == self._correct
 
     def ask_for_answers(self) -> str:
@@ -118,21 +129,27 @@ class QuestionFactory:
     @staticmethod
     def create_question(question_content: str, answers) -> Question:
         if (options := len(answers)) < 2:
-            raise Exception(f"Invalid number of numbers ({options}) for question {question_content}")
+            raise Exception(
+                f"Invalid number of numbers ({options}) for question {question_content}"
+            )
         correct_indices = []
         boolean_flag = False
         for index, answer in enumerate(answers):
-            if answer.strip()[0] == '#':
+            if answer.strip()[0] == "#":
                 correct_indices.append(index)
                 answers[index] = answer.strip()[1:]
             if not boolean_flag and answer.strip().lower() in {"true", "false"}:
                 boolean_flag = True
         if boolean_flag and len(correct_indices) == 1:
-            return BooleanQuestion(question_content, answers[correct_indices[0]].lower() == "true")
+            return BooleanQuestion(
+                question_content, answers[correct_indices[0]].lower() == "true"
+            )
         elif not boolean_flag and len(correct_indices) == 1:
             return SingleChoice(question_content, answers, correct_indices[0])
         elif not boolean_flag and len(correct_indices) > 1:
             return MultipleChoice(question_content, answers, correct_indices)
         else:
-            raise Exception(f"Invalid parameters: number of correct answers = {len(correct_indices)}",
-                            f"for question {question_content}")
+            raise Exception(
+                f"Invalid parameters: number of correct answers = {len(correct_indices)}",
+                f"for question {question_content}",
+            )
