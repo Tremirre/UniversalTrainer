@@ -1,8 +1,7 @@
-# HuaweiTrainer
+# UniversalTrainer
 ## Basics
-Simple application for training to the HCIA exam.
+Simple application for training to any closed question Exam/Test .
 Currently compatible with python 3.8.x and higher. 
-It provides a comfy interface to get well acquainted with course exam questions.
 
 To run the program it is you should start the console in the project directory and run main.py file with python by using command:
 > py main.py
