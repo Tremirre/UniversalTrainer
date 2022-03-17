@@ -14,7 +14,7 @@ class Question(ABC):
         ...
 
     def print_question(self):
-        print(self._question_content, "\n")
+        print(f"--> {self._question_content}\n")
 
     def print_answers(self):
         shuffle(self._answers)

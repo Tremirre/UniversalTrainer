@@ -1,3 +1,4 @@
+import os
 from random import shuffle, sample
 from time import sleep
 from Trainer.question import QuestionFactory
@@ -5,6 +6,7 @@ from Trainer.input_parser import Mode, parse_input
 
 
 class Trainer:
+    PACKAGES_FOLDER = "AvailablePackages"
     def __init__(self):
         self.questions_pool = []
         self.mode, self.test_size = parse_input()
@@ -44,16 +46,15 @@ class Trainer:
             question.print_correct_answers()
             print()
 
-    def import_questions(self, filename="Questions.csv", csv_file_separator=","):
-        with open(filename, "r") as file:
-            for line_number, line in enumerate(file):
-                if line_number == 0:
-                    continue
-                line = line.split(csv_file_separator)
-                parsed = []
-                for index, record in enumerate(line):
-                    if len(record) != 0 and record != "\n":
-                        parsed.append(record.strip("\n").strip())
-                self.questions_pool.append(
-                    QuestionFactory.create_question(parsed[0], parsed[1:])
-                )
+    def import_questions(self, csv_file_separator=","):
+        for filename in os.listdir("AvailablePackages"):
+            with open(f"{Trainer.PACKAGES_FOLDER}/{filename}", "r") as file:
+                for line in file:
+                    line = line.split(csv_file_separator)
+                    parsed = []
+                    for index, record in enumerate(line):
+                        if len(record) != 0 and record != "\n":
+                            parsed.append(record.strip("\n").strip())
+                    self.questions_pool.append(
+                        QuestionFactory.create_question(parsed[0], parsed[1:])
+                    )
