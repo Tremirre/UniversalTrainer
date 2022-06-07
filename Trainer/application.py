@@ -54,8 +54,9 @@ class Trainer:
                     line = line.split(csv_file_separator)
                     parsed = []
                     for index, record in enumerate(line):
-                        if len(record) != 0 and record != "\n":
-                            parsed.append(record.strip("\n").strip())
+                        record = record.strip()
+                        if record:
+                            parsed.append(record)
                     self.questions_pool.append(
                         QuestionFactory.create_question(parsed[0], parsed[1:])
                     )
