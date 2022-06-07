@@ -52,7 +52,7 @@ class SingleChoice(Question):
         self._correct = answers[correct_index]
 
     def check_answer(self, letter: str) -> bool:
-        if len(letter) != 1:
+        if len(letter) != 1 or letter.upper() not in ascii_uppercase:
             return False
         index = ord(letter.upper()) - ord("A")
         return index < len(self._answers) and self._answers[index] == self._correct
@@ -78,8 +78,10 @@ class MultipleChoice(Question):
         if len(letters) != len(self._correct):
             return False
         for letter in letters:
+            if letter.upper() not in ascii_uppercase:
+                return False
             if (answer_id := ascii_uppercase.index((letter.upper()))) >= len(
-                self._answers
+                    self._answers
             ):
                 return False
             if self._answers[answer_id] not in self._correct:
