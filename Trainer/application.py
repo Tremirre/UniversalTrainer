@@ -48,7 +48,7 @@ class Trainer:
             print()
 
     def import_questions(self, csv_file_separator=","):
-        for filename in os.listdir("AvailablePackages"):
+        for filename in os.listdir(Trainer.PACKAGES_FOLDER):
             with open(f"{Trainer.PACKAGES_FOLDER}/{filename}", "r") as file:
                 for line in file:
                     line = line.split(csv_file_separator)
