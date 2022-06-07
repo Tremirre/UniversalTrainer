@@ -1,0 +1,5 @@
+Sky is blue                                 ,#True                  ,False
+Trees are not green                         ,True                   ,#False
+The capital of Norway is:                   ,Warsaw                 ,Helsinki               ,Stockholm               ,#Oslo
+Choose countries that are members of the EU:,#Poland                ,#Lithuania             ,#Italy                  ,Switzerland,The Vatican City
+Choose correct ordering of workdays:        ,Mon->Tue->Fri->Wed->Thu,Mon->Fri->Tue->Thu->Wed,#Mon->Tue->Wed->Thu->Fri

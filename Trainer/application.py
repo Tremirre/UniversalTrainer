@@ -7,6 +7,7 @@ from Trainer.input_parser import Mode, parse_input
 
 class Trainer:
     PACKAGES_FOLDER = "AvailablePackages"
+
     def __init__(self):
         self.questions_pool = []
         self.mode, self.test_size = parse_input()
