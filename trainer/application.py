@@ -1,18 +1,17 @@
 import os
 from random import shuffle, sample
 from time import sleep
-from Trainer.question import QuestionFactory
-from Trainer.input_parser import Mode, parse_input
+from trainer.question import QuestionFactory
+from trainer.input_parser import Mode, parse_input
 
 
 class Trainer:
-    PACKAGES_FOLDER = "AvailablePackages"
-
-    def __init__(self):
+    def __init__(self, resource_dir: str):
         self.questions_pool = []
         self.mode, self.test_size = parse_input()
+        self.resource_dir = resource_dir
         self.import_questions()
-
+        
     def run(self):
         mode_dict = {
             Mode.TEST: self.test,

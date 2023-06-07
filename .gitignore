@@ -1,0 +1,5 @@
+.idea/
+.venv/
+UTPackages/*
+!UTPackages/Example
+**/*.pyc
