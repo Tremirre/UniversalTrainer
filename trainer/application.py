@@ -11,7 +11,7 @@ class Trainer:
         self.mode, self.test_size = parse_input()
         self.resource_dir = resource_dir
         self.import_questions()
-        
+
     def run(self):
         mode_dict = {
             Mode.TEST: self.test,
@@ -47,8 +47,8 @@ class Trainer:
             print()
 
     def import_questions(self, csv_file_separator=","):
-        for filename in os.listdir(Trainer.PACKAGES_FOLDER):
-            with open(f"{Trainer.PACKAGES_FOLDER}/{filename}", "r") as file:
+        for filename in os.listdir(self.resource_dir):
+            with open(f"{self.resource_dir}/{filename}", "r") as file:
                 for line in file:
                     line = line.split(csv_file_separator)
                     parsed = []
