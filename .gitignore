@@ -3,3 +3,4 @@
 UTPackages/*
 !UTPackages/Example
 **/*.pyc
+.env
